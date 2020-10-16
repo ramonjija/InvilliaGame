@@ -1,4 +1,4 @@
-# :space_invader: Invillia - Borrowing Game API :video_game:
+# :space_invader: InvilliaTest - Borrowing Game API :video_game:
 
 This API is used to manage friends and games which can be borrowed by them. Making it easier to get track of each game that is borrowed.
 
@@ -10,19 +10,48 @@ Use [docker-compose](https://docs.docker.com/compose/install/) to run all the re
 docker-compose up -d
 ```
 
-*Obs: If you are using Docker in MacOS add the following paths to the File Sharing at docker:
+*Obs: If you are using Docker in MacOS add the following paths to the File Sharing settings.json at docker:
 
-```
-/Microsoft/UserSecrets
-/ASP.NET/Https
-```
+  ~/Library/Group\ Containers/group.com.docker/settings.json
+
+  ```
+  ~/Library/Group\ Containers/group.com.docker/settings.json
+  ```
+  Add at field filesharingDirectories:
+
+  ```
+  “filesharingDirectories” : [
+    “\/Users”,
+    “\/Volumes”,
+    “\/private”,
+    “\/tmp”
+  ],
+  ```
+  The values:
+  ```
+  “\/Microsoft\/UserSecrets”
+  “\/ASP.NET\/Https”
+  ```
+
+  Resulting in:
+
+  ```
+  “filesharingDirectories” : [
+    “\/Users”,
+    “\/Volumes”,
+    “\/private”,
+    “\/tmp”,
+    “\/Microsoft\/UserSecrets”,
+    “\/ASP.NET\/Https”
+  ],
+  ```
 
 The command should be runned at root folder of the application, where <b>docker-compose.yml</b> is located.
 
 
 ## Usage
 
-After all the containers are up, navigate to https://localhost:5101 to go the swaggerUI page.
+After all the containers are up, navigate to http://localhost:5100 to go the swaggerUI page.
 
 The API uses JWT for authorization and has two Roles (User Types):  
 
