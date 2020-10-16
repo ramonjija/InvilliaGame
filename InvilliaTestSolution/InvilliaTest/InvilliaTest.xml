@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>InvilliaTest</name>
+    </assembly>
+    <members>
+        <member name="M:InvilliaTest.Controllers.BorrowGamesController.GetBorrowedGamesOfUser">
+            <summary>
+            This Route is Responsible to Return all Borrowed Games of the Current User
+            </summary>
+        </member>
+        <member name="M:InvilliaTest.Controllers.BorrowGamesController.BorrowGame(System.Collections.Generic.List{System.Int32})">
+            <summary>
+             This Route Is Used to Borrow a Game
+             </summary>
+             <param name="borrowedGamesIds">Ids of the Games who will be borrowed</param>
+        </member>
+        <member name="M:InvilliaTest.Controllers.BorrowGamesController.ReturnGame(System.Collections.Generic.List{System.Int32})">
+            <summary>
+             This Route Is Used to Borrow a Game
+             </summary>
+             <param name="returnedGamesIds">Ids of the Games who will be returned</param>
+        </member>
+        <member name="M:InvilliaTest.Controllers.GamesController.GetById(System.Int32)">
+            <summary>
+            This Route is Responsible to Return a Game by Id
+            </summary>
+            <param name="gameId">Id of the Game</param>
+        </member>
+        <member name="M:InvilliaTest.Controllers.GamesController.Get">
+            <summary>
+            This Route is Responsible to Return All Games
+            </summary>
+        </member>
+        <member name="M:InvilliaTest.Controllers.GamesController.Post(System.String)">
+            <summary>
+            This Route Is Used to Create a Game
+            </summary>
+            <param name="gameName">Name of the Game To be Created</param>
+        </member>
+        <member name="M:InvilliaTest.Controllers.GamesController.Put(System.Int32,System.String)">
+            <summary>
+            This Route Is Used to Edit a Game
+            </summary>
+            <param name="gameId">Id of the Game</param>
+            <param name="gameName">Updated Name of Game</param>
+        </member>
+        <member name="M:InvilliaTest.Controllers.GamesController.Delete(System.Int32)">
+            <summary>
+            This Route is Responsible to Delete a Game
+            </summary>
+            <param name="gameId">Id of the Game</param>
+        </member>
+        <member name="M:InvilliaTest.Controllers.UsersController.GetById(System.Int32)">
+            <summary>
+            This Route is Responsible to Return a User by Id
+            </summary>
+            <param name="userId">Id of The User</param>
+        </member>
+        <member name="M:InvilliaTest.Controllers.UsersController.Get">
+            <summary>
+            This Route is Responsible to Return All Users
+            </summary>
+        </member>
+        <member name="M:InvilliaTest.Controllers.UsersController.Login(InvilliaTest.DTO.LogUserDto)">
+            <summary>
+            This Route is Responsible for the Login of the User
+            </summary>
+        </member>
+        <member name="M:InvilliaTest.Controllers.UsersController.Post(InvilliaTest.DTO.PostUserDto)">
+            <summary>
+            This Route is Used to Create Users
+            </summary>
+            <param name="postUserDto">
+            Name = Name of the User
+            Password = Password of the User
+            UserType = Type of User:
+            1 - Administrator
+            2 - Friend
+            </param>
+        </member>
+        <member name="M:InvilliaTest.Controllers.UsersController.Put(System.Int32,InvilliaTest.DTO.PutUserDto)">
+            <summary>
+            This Route Is Used to Edit Users
+            </summary>
+            <param name="userId">Id of The User</param>
+            <param name="putUserDto">
+            Name = Name of the User
+            Password = Password of the User
+            UserType = Type of User:
+            1 - Administrator
+            2 - Friend
+            </param>
+        </member>
+        <member name="M:InvilliaTest.Controllers.UsersController.Delete(System.Int32)">
+            <summary>
+            This Route is Responsible to Delete an User
+            </summary>
+            <param name="userId">Id of the User</param>
+        </member>
+    </members>
+</doc>

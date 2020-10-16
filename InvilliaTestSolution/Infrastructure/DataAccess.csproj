@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20201009045028_InitialCreate.cs" />
+    <Compile Remove="Migrations\20201009045028_InitialCreate.Designer.cs" />
+    <Compile Remove="Migrations\20201010013741_InitialCreate.cs" />
+    <Compile Remove="Migrations\20201010013741_InitialCreate.Designer.cs" />
+    <Compile Remove="Migrations\20201010015851_InitialCreate.cs" />
+    <Compile Remove="Migrations\20201010015851_InitialCreate.Designer.cs" />
+    <Compile Remove="Migrations\20201010022051_InitialCreate.cs" />
+    <Compile Remove="Migrations\20201010022051_InitialCreate.Designer.cs" />
+    <Compile Remove="Migrations\20201010022424_InitialCreate.cs" />
+    <Compile Remove="Migrations\20201010022424_InitialCreate.Designer.cs" />
+    <Compile Remove="Migrations\20201011184552_InitialCreate.cs" />
+    <Compile Remove="Migrations\20201011184552_InitialCreate.Designer.cs" />
+    <Compile Remove="Migrations\20201011190611_InitialCreate.cs" />
+    <Compile Remove="Migrations\20201011190611_InitialCreate.Designer.cs" />
+    <Compile Remove="Migrations\20201012043506_InitialCreate.cs" />
+    <Compile Remove="Migrations\20201012043506_InitialCreate.Designer.cs" />
+    <Compile Remove="Migrations\20201014144916_Configure Friend.cs" />
+    <Compile Remove="Migrations\20201014144916_Configure Friend.Designer.cs" />
+    <Compile Remove="Migrations\20201014145129_Configure Borrowed Games.cs" />
+    <Compile Remove="Migrations\20201014145129_Configure Borrowed Games.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="3.1.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain.Model.csproj" />
+  </ItemGroup>
+
+</Project>

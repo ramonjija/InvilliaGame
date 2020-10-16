@@ -1,0 +1,32 @@
+version: '3.4'
+
+networks: 
+  invilliatest-network:
+    driver: bridge
+
+services:
+  sql-server-db:
+    container_name: sql-server-db
+    image: microsoft/mssql-server-linux:2017-latest
+    ports:
+        - "1445:1433"
+    networks: 
+        - invilliatest-network
+    environment:
+        SA_PASSWORD: "Pass@word"
+        ACCEPT_EULA: "Y"
+        MSSQL_AGENT_ENABLED: "true"
+
+  invilliatest:
+    image: ${DOCKER_REGISTRY-}invilliatest
+    build:
+      context: .
+      dockerfile: InvilliaTest/Dockerfile
+    environment:
+        - ConnectionString=Server=sql-server-db;Database=BorrowedGames;User Id=sa;Password=Pass@word;TrustServerCertificate=true
+    ports:
+        - "5100:80"
+    depends_on: 
+        - sql-server-db
+    networks: 
+        - invilliatest-network

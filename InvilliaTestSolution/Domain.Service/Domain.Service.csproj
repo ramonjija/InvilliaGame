@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Authentication\Security.csproj" />
+    <ProjectReference Include="..\Domain\Domain.Model.csproj" />
+    <ProjectReference Include="..\Infrastructure\DataAccess.csproj" />
+  </ItemGroup>
+
+</Project>
