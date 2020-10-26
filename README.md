@@ -75,7 +75,7 @@ The Application is built on:
 - Sql Server 2017
 - Docker
 - Docker-Compose
-- Cryptograpy (BCrypt.Net)
+- Cryptography (BCrypt.Net)
 - JWT Token
 - AutoMapper
 - EF Core
